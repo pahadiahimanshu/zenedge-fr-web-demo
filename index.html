@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Content Extracter</title>
+
+    <!-- Latest compiled JavaScript -->
+
+    <!--    <script src="{% static 'js/jquery.min.js' %}"></script>-->
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- <link rel="stylesheet"  href="{% static 'css/custom.min.css' %}" /> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+    <script type='text/javascript' src='//code.jquery.com/jquery-2.0.2.js'></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="js/realtime1.js"></script>
+    <style>
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:hover,
+        .nav-tabs>li.active>a:focus {
+            color: #046990;
+            background-color: #bbe64d;
+            cursor: default;
+            padding: 4px 5px;
+            /*  border: 1px solid #ddd;
+   border-bottom-color: transparent; */
+        }
+
+        video {
+
+            max-width: 100%;
+            max-height: 100%;
+            /* height: auto; */
+        }
+
+        canvas {
+
+            max-width: 100%;
+            max-height: 100%;
+            /* height: auto; */
+        }
+
+        .controls {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-height: 450px) {
+            body {
+                overflow: auto;
+            }
+
+            /* Or change the height or whatever */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="panel panel-info" style="    border-color: #172b46;">
+        <div class="panel-heading" style="    text-align: center;
+  border-color: #172b46;
+  border-bottom: 1px solid #172b46;
+       color: #172b46;
+        background-color: darkcyan;">
+            <h1 style="color: white">ZenEdge</h1>
+
+        </div>
+
+        <div class="panel-body">
+
+            <!-- Standar Form -->
+            <div class="tab-content">
+                <div class="container-fluid h-100" style="   margin-left: 1px;">
+                    <div id="mapPlaces" class="tab-pane fade in active">
+                        <div id="videoContainer" style="padding:10px;font-size:1.3em;">
+                            <div class="container" style="">
+                                <div class="row">
+
+                                    <div class="col-sm-12">
+                                        <label for="videoSource" style="    color: rgba(6, 105, 145, 1);">
+                                            Camera source:
+                                        </label>
+                                        <!-- The camera sources connected to the laptop will be shown here. -->
+                                        <select class="form-control" id="videoSource" style="margin-left:10px;">
+                                            <option>Select Camera Source</option>
+                                            <option value="c508e3787c1402e184b7a15d0ae827a32e97337c0218d02c8e50dd8d67d0a1fa">FaceTime HD Camera (Built-in) (05ac:8511)</option>
+                                        </select>
+                                        
+                                        <!-- Camera-stream is where the video is shown-->
+                                        <video id="camera-stream" width="4500" height="380" style="margin-top:14px;"></video>
+                                        <canvas id="myCanvas" width="4500" height="300" style="     border:3px solid #046990;margin-top:10px;" hidden></canvas>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <h1 id="people">Please come closer to the camera.</h1>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
